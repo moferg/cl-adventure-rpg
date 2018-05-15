@@ -8,18 +8,24 @@ namespace CLAdventureRPG
 {
     public class Player
     {
-        // Name
-        // Experience
-        // Level
-        // Gold
+        public string Name = "";
+        public int Experience = 0;
+        public int Level = 1;
+        public int Gold = 0;
         // Inventory
-        // Health
-        // Mana
-        // Stamina
+        public int MaxHealth = 100;
+        public int Health = 100;
+        public int MaxMana = 100;
+        public int Mana = 100;
+        public int MaxStamina = 100;
+        public int Stamina = 100;
         // Armor
         // Damage
 
-        // Player()
+        public Player(string name)
+        {
+            Name = name;
+        }
         // LevelUp()
         // Attack()
         // Run()

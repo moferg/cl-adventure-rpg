@@ -14,9 +14,12 @@ namespace CLAdventureRPG
         public int ExperienceDrop = 10;
         public int Health = 50;
         // Armor
-        // Damage
+        public int Damage = 5;
         
         // Monster()
-        // Attack()
+        // public Attack(Player player)
+        // {
+            // player.Helath =- monster.Damage
+        // }
     }
 }

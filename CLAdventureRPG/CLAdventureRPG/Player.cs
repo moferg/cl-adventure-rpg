@@ -20,14 +20,18 @@ namespace CLAdventureRPG
         public int MaxStamina = 100;
         public int Stamina = 100;
         // Armor
-        // Damage
+        public int Damage = 10;
+        // IsAlive
 
         public Player(string name)
         {
             Name = name;
         }
         // LevelUp()
-        // Attack()
+        // public Attack(Monster monster)
+        // {
+            // Monster.Health =- Player.Damage;
+        // }
         // Run()
     }
 }

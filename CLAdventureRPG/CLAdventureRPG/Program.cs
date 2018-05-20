@@ -35,12 +35,41 @@ namespace CLAdventureRPG
 
             Console.WriteLine("Press Enter to attack.");
             Console.ReadKey();
-            Console.WriteLine($"{player.Name} attacks the {monster.Name}!");
             player.Attack(monster);
-            Console.WriteLine($"{monster.Name} now has {monster.Health} health remaining.");
             Console.WriteLine($"The {monster.Name} attacks back!");
             monster.Attack(player);
             Console.WriteLine($"You have {player.Health} health remaining.");
+
+            Console.WriteLine("Press Enter to attack.");
+            Console.ReadKey();
+            player.Attack(monster);
+            Console.WriteLine($"The {monster.Name} attacks back!");
+            monster.Attack(player);
+            Console.WriteLine($"You have {player.Health} health remaining.");
+
+            Console.WriteLine("Press Enter to attack.");
+            Console.ReadKey();
+            player.Attack(monster);
+            Console.WriteLine($"The {monster.Name} attacks back!");
+            monster.Attack(player);
+            Console.WriteLine($"You have {player.Health} health remaining.");
+
+            Console.WriteLine("Press Enter to attack.");
+            Console.ReadKey();
+            player.Attack(monster);
+            Console.WriteLine($"The {monster.Name} attacks back!");
+            monster.Attack(player);
+            Console.WriteLine($"You have {player.Health} health remaining.");
+
+            Console.WriteLine("Press Enter to attack.");
+            Console.ReadKey();
+            player.Attack(monster);
+            Console.WriteLine($"The {monster.Name} attacks back!");
+            monster.Attack(player);
+            Console.WriteLine($"You have {player.Health} health remaining.");
+
+            Console.WriteLine($"You now have {player.Gold} gold.");
+            Console.WriteLine($"You now have {player.Experience} xp.");
 
             Console.WriteLine("Press Enter to exit.");
             Console.Read();

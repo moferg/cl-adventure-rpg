@@ -21,5 +21,20 @@ namespace CLAdventureRPG
         {
             player.Health -= this.Damage;
         }
+
+        public void Die(Player player)
+        {
+            Console.WriteLine($"You killed the {this.Name}!");
+            player.Gold += this.GoldDrop;
+            player.Experience += this.ExperienceDrop;
+        }
+
+        public void CheckIfDead(Player player)
+        {
+            if (this.Health <= 0)
+            {
+                this.Die(player);
+            }
+        }
     }
 }

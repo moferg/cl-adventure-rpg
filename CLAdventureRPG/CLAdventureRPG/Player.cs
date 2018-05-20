@@ -30,7 +30,10 @@ namespace CLAdventureRPG
         // LevelUp()
         public void Attack(Monster monster)
         {
+            Console.WriteLine($"{this.Name} attacks the {monster.Name}!");
             monster.Health -= this.Damage;
+            Console.WriteLine($"{monster.Name} now has {monster.Health} health remaining.");
+            monster.CheckIfDead(this);
         }
         // Run()
     }

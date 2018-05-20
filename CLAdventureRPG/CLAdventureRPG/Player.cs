@@ -28,10 +28,10 @@ namespace CLAdventureRPG
             Name = name;
         }
         // LevelUp()
-        // public Attack(Monster monster)
-        // {
-            // Monster.Health =- Player.Damage;
-        // }
+        public void Attack(Monster monster)
+        {
+            monster.Health -= this.Damage;
+        }
         // Run()
     }
 }

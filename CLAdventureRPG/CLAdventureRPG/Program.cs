@@ -38,6 +38,9 @@ namespace CLAdventureRPG
             Console.WriteLine($"{player.Name} attacks the {monster.Name}!");
             player.Attack(monster);
             Console.WriteLine($"{monster.Name} now has {monster.Health} health remaining.");
+            Console.WriteLine($"The {monster.Name} attacks back!");
+            monster.Attack(player);
+            Console.WriteLine($"You have {player.Health} health remaining.");
 
             Console.WriteLine("Press Enter to exit.");
             Console.Read();

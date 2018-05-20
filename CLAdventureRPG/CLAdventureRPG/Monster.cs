@@ -17,9 +17,9 @@ namespace CLAdventureRPG
         public int Damage = 5;
         
         // Monster()
-        // public Attack(Player player)
-        // {
-            // player.Helath =- monster.Damage
-        // }
+        public void Attack(Player player)
+        {
+            player.Health -= this.Damage;
+        }
     }
 }

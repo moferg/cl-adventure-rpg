@@ -36,5 +36,14 @@ namespace CLAdventureRPG
             monster.CheckIfDead(this);
         }
         // Run()
+        public void GoldCheck()
+        {
+            Console.WriteLine($"You have {this.Gold} gold.");
+        }
+
+        public void ExperienceCheck()
+        {
+            Console.WriteLine($"You have {this.Experience} xp.");
+        }
     }
 }

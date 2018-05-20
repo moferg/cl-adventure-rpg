@@ -58,9 +58,6 @@ namespace CLAdventureRPG
             player.Attack(monster);
             monster.Attack(player);
 
-            Console.WriteLine($"You now have {player.Gold} gold.");
-            Console.WriteLine($"You now have {player.Experience} xp.");
-
             Console.WriteLine("Press Enter to exit.");
             Console.Read();
         }

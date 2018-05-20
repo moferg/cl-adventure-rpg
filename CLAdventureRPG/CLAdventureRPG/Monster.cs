@@ -29,6 +29,8 @@ namespace CLAdventureRPG
             Console.WriteLine($"You killed the {this.Name}!");
             player.Gold += this.GoldDrop;
             player.Experience += this.ExperienceDrop;
+            player.GoldCheck();
+            player.ExperienceCheck();
         }
 
         public void CheckIfDead(Player player)

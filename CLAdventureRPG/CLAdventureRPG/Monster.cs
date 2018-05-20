@@ -36,6 +36,10 @@ namespace CLAdventureRPG
             player.Experience += this.ExperienceDrop;
             player.GoldCheck();
             player.ExperienceCheck();
+            if (player.Experience >= 100)
+            {
+                player.LevelUp();
+            }
         }
 
         public void CheckIfDead(Player player)

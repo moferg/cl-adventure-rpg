@@ -53,6 +53,10 @@ namespace CLAdventureRPG
             player.Attack(monster);
             monster.Attack(player);
 
+            // Hard coded min required experience to level up
+            // to test LevelUp() method
+            monster.ExperienceDrop = 100;
+
             Console.WriteLine("Press Enter to attack.");
             Console.ReadKey();
             player.Attack(monster);

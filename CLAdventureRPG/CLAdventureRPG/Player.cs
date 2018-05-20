@@ -27,7 +27,22 @@ namespace CLAdventureRPG
         {
             Name = name;
         }
-        // LevelUp()
+
+        public void LevelUp()
+        {
+            Level++;
+            Console.WriteLine($"You are now level {this.Level}.");
+            MaxHealth += 10;
+            MaxMana += 10;
+            MaxStamina += 10;
+            Console.WriteLine($"Your maximum health is now {this.MaxHealth}");
+            Console.WriteLine($"Your maximum mana is now {this.MaxMana}");
+            Console.WriteLine($"Your maximum stamina is now {this.MaxStamina}");
+            Health = MaxHealth;
+            Mana = MaxMana;
+            Stamina = MaxStamina;
+        }
+
         public void Attack(Monster monster)
         {
             Console.WriteLine($"{this.Name} attacks the {monster.Name}!");

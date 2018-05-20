@@ -20,20 +20,20 @@ namespace CLAdventureRPG
         // Monster()
         public void Attack(Player player)
         {
-            if (this.IsAlive)
+            if (IsAlive)
             {
-                Console.WriteLine($"The {this.Name} attacks you!");
-                player.Health -= this.Damage;
+                Console.WriteLine($"The {Name} attacks you!");
+                player.Health -= Damage;
                 Console.WriteLine($"You have {player.Health} health remaining.");
             }
         }
 
         public void Die(Player player)
         {
-            this.IsAlive = false;
-            Console.WriteLine($"You killed the {this.Name}!");
-            player.Gold += this.GoldDrop;
-            player.Experience += this.ExperienceDrop;
+            IsAlive = false;
+            Console.WriteLine($"You killed the {Name}!");
+            player.Gold += GoldDrop;
+            player.Experience += ExperienceDrop;
             player.GoldCheck();
             player.ExperienceCheck();
             if (player.Experience >= 100)
@@ -44,9 +44,9 @@ namespace CLAdventureRPG
 
         public void CheckIfDead(Player player)
         {
-            if (this.Health <= 0)
+            if (Health <= 0)
             {
-                this.Die(player);
+                Die(player);
             }
         }
     }

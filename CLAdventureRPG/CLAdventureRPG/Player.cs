@@ -31,13 +31,13 @@ namespace CLAdventureRPG
         public void LevelUp()
         {
             Level++;
-            Console.WriteLine($"You are now level {this.Level}.");
+            Console.WriteLine($"You are now level {Level}.");
             MaxHealth += 10;
             MaxMana += 10;
             MaxStamina += 10;
-            Console.WriteLine($"Your maximum health is now {this.MaxHealth}");
-            Console.WriteLine($"Your maximum mana is now {this.MaxMana}");
-            Console.WriteLine($"Your maximum stamina is now {this.MaxStamina}");
+            Console.WriteLine($"Your maximum health is now {MaxHealth}");
+            Console.WriteLine($"Your maximum mana is now {MaxMana}");
+            Console.WriteLine($"Your maximum stamina is now {MaxStamina}");
             Health = MaxHealth;
             Mana = MaxMana;
             Stamina = MaxStamina;
@@ -45,20 +45,20 @@ namespace CLAdventureRPG
 
         public void Attack(Monster monster)
         {
-            Console.WriteLine($"{this.Name} attacks the {monster.Name}!");
-            monster.Health -= this.Damage;
+            Console.WriteLine($"{Name} attacks the {monster.Name}!");
+            monster.Health -= Damage;
             Console.WriteLine($"{monster.Name} now has {monster.Health} health remaining.");
             monster.CheckIfDead(this);
         }
         // Run()
         public void GoldCheck()
         {
-            Console.WriteLine($"You have {this.Gold} gold.");
+            Console.WriteLine($"You have {Gold} gold.");
         }
 
         public void ExperienceCheck()
         {
-            Console.WriteLine($"You have {this.Experience} xp.");
+            Console.WriteLine($"You have {Experience} xp.");
         }
     }
 }

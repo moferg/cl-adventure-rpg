@@ -19,7 +19,9 @@ namespace CLAdventureRPG
         // Monster()
         public void Attack(Player player)
         {
+            Console.WriteLine($"The {this.Name} attacks you!");
             player.Health -= this.Damage;
+            Console.WriteLine($"You have {player.Health} health remaining.");
         }
 
         public void Die(Player player)

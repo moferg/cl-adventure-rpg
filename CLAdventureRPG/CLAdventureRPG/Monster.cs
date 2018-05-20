@@ -15,17 +15,22 @@ namespace CLAdventureRPG
         public int Health = 50;
         // Armor
         public int Damage = 5;
+        public bool IsAlive = true;
         
         // Monster()
         public void Attack(Player player)
         {
-            Console.WriteLine($"The {this.Name} attacks you!");
-            player.Health -= this.Damage;
-            Console.WriteLine($"You have {player.Health} health remaining.");
+            if (this.IsAlive)
+            {
+                Console.WriteLine($"The {this.Name} attacks you!");
+                player.Health -= this.Damage;
+                Console.WriteLine($"You have {player.Health} health remaining.");
+            }
         }
 
         public void Die(Player player)
         {
+            this.IsAlive = false;
             Console.WriteLine($"You killed the {this.Name}!");
             player.Gold += this.GoldDrop;
             player.Experience += this.ExperienceDrop;
